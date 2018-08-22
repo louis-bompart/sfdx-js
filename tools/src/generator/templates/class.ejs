@@ -1,0 +1,61 @@
+// Generated on <%= getCurrentFormatedDate() %>. DO NOT MODIFY
+import {
+  apiParameter,
+  apiNamespace,
+  apiCommandClass,
+  apiCommand
+} from "../core/decorators"
+import { loglevel, IStringKeyPair } from "../modules/common"
+import { ICommandExecutioner } from "../core/commandExecutioner"
+
+<% _.each(functionDefinitions, function(functionDef) { %>
+/**
+ * Options for the method <%= functionDef.name %> of class <%= className %>.
+ *
+ * @export
+ * @interface I<%= className %><%= capitalizeFirstLetter(functionDef.name) %>
+ */
+export interface I<%= className %><%= capitalizeFirstLetter(functionDef.name) %> {
+<% var numberOfParameters = functionDef.parameters.length;
+  _.each(functionDef.parameters, function(functionParameter, index) {
+%>
+  /**
+   * <%= functionParameter.optional ? '[Optional]' : '[Required]' %> <%= escapeForComments(functionParameter.description) %>
+   * @type {<%= functionParameter.type %>}
+   * @memberof I<%= className %><%= capitalizeFirstLetter(functionDef.name) %>
+   */
+  <%= functionParameter.name %><% if(functionParameter.optional){ %>?<% } %>: <%= functionParameter.type %><% if((numberOfParameters - 1) !== index){ %>,<% } %>
+<% }) %>}
+<% }) %>
+
+/**
+ * <%= className %>
+ *
+ * @export
+ * @class <%= className %>
+ */
+@apiNamespace("force")
+@apiCommandClass("<%= apiCommandClass %>")
+export class <%= className %> {
+  constructor(private requestExecutioner: ICommandExecutioner) {}
+  <% _.each(functionDefinitions, function(functionDef) { %>
+  /**
+   * <%= escapeForComments(functionDef.shortDescription) %>
+   * @returns {(Promise<<%= functionDef.returnType %> | void>)}
+   * @memberof <%= escapeForComments(className) %>
+   * @description <%= escapeForComments(functionDef.description) %>
+   * @example <%= escapeForComments(functionDef.help) %>
+   * <%= escapeForComments(functionDef.example) %>
+   */
+    @apiCommand("<%= functionDef.apiCommand %>")
+    public <%= functionDef.name %>(options<% if(isAllOptionalParameters(functionDef.parameters)) {%>?<%} %>: I<%= className %><%= capitalizeFirstLetter(functionDef.name) %>) : Promise<<%= functionDef.returnType %> | void> {
+      const parameterNamesToSwitchNames = {
+      <% var numberOfParameters = functionDef.parameters.length;
+      _.each(functionDef.parameters, function(functionParameter, index) {
+      %>  <%= functionParameter.name %>: "<%= functionParameter.flagKey %>"<% if((numberOfParameters - 1) !== index){ %>,<% } %>
+      <% }) %>}
+
+      return this.requestExecutioner.execute<<%= functionDef.returnType %>>(this, this.<%= functionDef.name %>, options, parameterNamesToSwitchNames)
+    }
+  <% }) %>
+}

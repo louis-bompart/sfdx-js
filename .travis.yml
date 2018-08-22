@@ -1,0 +1,33 @@
+language: node_js
+sudo: required
+branches:
+  only:
+    - master
+    - /^greenkeeper/.*$/
+cache: yarn
+notifications:
+  email: false
+node_js:
+  - 'lts/*'
+before_script:
+  - npm run generate
+script:
+  - npm run test:prod
+  - npm run build
+after_success:
+  - npm run report-coverage
+  - npm run deploy-docs
+  - npm run semantic-release
+deploy:
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+    keep-history: true
+    on:
+      branch: master
+  # - provider: script
+  #   skip_cleanup: true
+  #   script:
+  #     - npx semantic-release
+  #   on:
+  #     branch: master
