@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CommandExecutioner | sfdx-js</title>
+	<title>CommandExecutioner | sfdx-js-fake</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -879,7 +879,7 @@ img { max-width: 100%; }
 		<div class="container">
 			<div class="table-wrap">
 				<div class="table-cell">
-					<strong><a href="../index.html">sfdx-js</a></strong>
+					<strong><a href="../index.html">sfdx-js-fake</a></strong>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -909,9 +909,6 @@ img { max-width: 100%; }
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class=" tsd-kind-enum tsd-parent-kind-external-module">
-			<a href="../enums/_core_commandexecutioner_.loglevel.html" class="tsd-kind-icon">Log<wbr>Level</a>
-		</li>
 		<li class="current tsd-kind-class tsd-parent-kind-external-module">
 			<a href="_core_commandexecutioner_.commandexecutioner.html" class="tsd-kind-icon">Command<wbr>Executioner</a>
 			<ul>
@@ -926,9 +923,6 @@ img { max-width: 100%; }
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a href="_core_commandexecutioner_.commandexecutioner.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a href="_core_commandexecutioner_.commandexecutioner.html#loglevel" class="tsd-kind-icon">log<wbr>Level</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 					<a href="_core_commandexecutioner_.commandexecutioner.html#execute" class="tsd-kind-icon">execute</a>
@@ -975,7 +969,6 @@ img { max-width: 100%; }
 							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_core_commandexecutioner_.commandexecutioner.html#commandoptions" class="tsd-kind-icon">command<wbr>Options</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_core_commandexecutioner_.commandexecutioner.html#commandrunner" class="tsd-kind-icon">command<wbr>Runner</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_core_commandexecutioner_.commandexecutioner.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_core_commandexecutioner_.commandexecutioner.html#loglevel" class="tsd-kind-icon">log<wbr>Level</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
@@ -994,13 +987,13 @@ img { max-width: 100%; }
 				<a name="constructor" class="tsd-anchor"></a>
 				<h3>constructor</h3>
 				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">new <wbr>Command<wbr>Executioner<span class="tsd-signature-symbol">(</span>commandRunner<span class="tsd-signature-symbol">: </span><a href="../interfaces/_core_commandrunner_.icommandrunner.html" class="tsd-signature-type">ICommandRunner</a>, defaultOptions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Object</span>, commandOptions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ExecSyncOptions</span>, logLevel<span class="tsd-signature-symbol">?: </span><a href="../enums/_core_commandexecutioner_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_core_commandexecutioner_.commandexecutioner.html" class="tsd-signature-type">CommandExecutioner</a></li>
+					<li class="tsd-signature tsd-kind-icon">new <wbr>Command<wbr>Executioner<span class="tsd-signature-symbol">(</span>commandRunner<span class="tsd-signature-symbol">: </span><a href="../interfaces/_core_commandrunner_.icommandrunner.html" class="tsd-signature-type">ICommandRunner</a>, defaultOptions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Object</span>, commandOptions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ExecSyncOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_core_commandexecutioner_.commandexecutioner.html" class="tsd-signature-type">CommandExecutioner</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/louis-bompart/sfdx-js/blob/ec1dd39/src/core/commandExecutioner.ts#L23">core/commandExecutioner.ts:23</a></li>
+								<li>Defined in <a href="https://github.com/louis-bompart/sfdx-js/blob/1d8e549/src/core/commandExecutioner.ts#L15">core/commandExecutioner.ts:15</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1013,9 +1006,6 @@ img { max-width: 100%; }
 							</li>
 							<li>
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> commandOptions: <span class="tsd-signature-type">ExecSyncOptions</span></h5>
-							</li>
-							<li>
-								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> logLevel: <a href="../enums/_core_commandexecutioner_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol"> =&nbsp;LogLevel.none</span></h5>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <a href="_core_commandexecutioner_.commandexecutioner.html" class="tsd-signature-type">CommandExecutioner</a></h4>
@@ -1031,7 +1021,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">command<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ExecSyncOptions</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/louis-bompart/sfdx-js/blob/ec1dd39/src/core/commandExecutioner.ts#L27">core/commandExecutioner.ts:27</a></li>
+						<li>Defined in <a href="https://github.com/louis-bompart/sfdx-js/blob/1d8e549/src/core/commandExecutioner.ts#L19">core/commandExecutioner.ts:19</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1041,7 +1031,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">command<wbr>Runner<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_core_commandrunner_.icommandrunner.html" class="tsd-signature-type">ICommandRunner</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/louis-bompart/sfdx-js/blob/ec1dd39/src/core/commandExecutioner.ts#L25">core/commandExecutioner.ts:25</a></li>
+						<li>Defined in <a href="https://github.com/louis-bompart/sfdx-js/blob/1d8e549/src/core/commandExecutioner.ts#L17">core/commandExecutioner.ts:17</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1051,17 +1041,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/louis-bompart/sfdx-js/blob/ec1dd39/src/core/commandExecutioner.ts#L26">core/commandExecutioner.ts:26</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-				<a name="loglevel" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagPrivate">Private</span> log<wbr>Level</h3>
-				<div class="tsd-signature tsd-kind-icon">log<wbr>Level<span class="tsd-signature-symbol">:</span> <a href="../enums/_core_commandexecutioner_.loglevel.html" class="tsd-signature-type">LogLevel</a></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/louis-bompart/sfdx-js/blob/ec1dd39/src/core/commandExecutioner.ts#L28">core/commandExecutioner.ts:28</a></li>
+						<li>Defined in <a href="https://github.com/louis-bompart/sfdx-js/blob/1d8e549/src/core/commandExecutioner.ts#L18">core/commandExecutioner.ts:18</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1079,7 +1059,7 @@ img { max-width: 100%; }
 						<aside class="tsd-sources">
 							<p>Implementation of <a href="../interfaces/_core_commandexecutioner_.icommandexecutioner.html">ICommandExecutioner</a>.<a href="../interfaces/_core_commandexecutioner_.icommandexecutioner.html#execute">execute</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/louis-bompart/sfdx-js/blob/ec1dd39/src/core/commandExecutioner.ts#L31">core/commandExecutioner.ts:31</a></li>
+								<li>Defined in <a href="https://github.com/louis-bompart/sfdx-js/blob/1d8e549/src/core/commandExecutioner.ts#L22">core/commandExecutioner.ts:22</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1117,7 +1097,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/louis-bompart/sfdx-js/blob/ec1dd39/src/core/commandExecutioner.ts#L48">core/commandExecutioner.ts:48</a></li>
+								<li>Defined in <a href="https://github.com/louis-bompart/sfdx-js/blob/1d8e549/src/core/commandExecutioner.ts#L39">core/commandExecutioner.ts:39</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
