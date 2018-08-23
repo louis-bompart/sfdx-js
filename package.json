@@ -1,5 +1,5 @@
 {
-  "name": "sfdx-js",
+  "name": "sfdx-js-fake",
   "version": "4.1.0",
   "description": "A node wrapper for Salesforce DX",
   "keywords": [
