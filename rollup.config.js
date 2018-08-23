@@ -6,7 +6,6 @@ const camelCase = require('lodash.camelcase')
 
 const libraryName = 'sfdx-js'
 const baseOutput = {
-  exports: 'named',
   sourcemap: true,
   globals: {
     'child_process': 'child_process',
