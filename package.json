@@ -82,7 +82,7 @@
   },
   "dependencies": {
     "reflect-metadata": "^0.1.12",
-    "underscore": "^1.9.1"
+    "underscore": "^1.10.1"
   },
   "devDependencies": {
     "@types/jest": "^23.3.1",
